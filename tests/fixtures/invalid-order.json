@@ -1,0 +1,18 @@
+{
+  "orderId": "",
+  "orderNumber": "RCU10003",
+  "email": "bad-email",
+  "totalPrice": -5.00,
+  "currency": "USD",
+  "lineItems": [],
+  "shippingAddress": {
+    "firstName": "Test",
+    "lastName": "User",
+    "address1": "789 Elm St",
+    "city": "Chicago",
+    "province": "IL",
+    "country": "US",
+    "zip": "60601"
+  },
+  "createdAt": "2026-04-01T16:00:00Z"
+}

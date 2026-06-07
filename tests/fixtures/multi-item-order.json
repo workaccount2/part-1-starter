@@ -1,0 +1,37 @@
+{
+  "orderId": "RCU-10002",
+  "orderNumber": "RCU10002",
+  "email": "jane@example.com",
+  "totalPrice": 155.00,
+  "currency": "USD",
+  "lineItems": [
+    {
+      "sku": "RW-6S-SS",
+      "title": "Rockwell 6S Adjustable Safety Razor",
+      "quantity": 1,
+      "price": 120.00
+    },
+    {
+      "sku": "RW-100B",
+      "title": "Rockwell Double-Edge Blades (100 Pack)",
+      "quantity": 1,
+      "price": 25.00
+    },
+    {
+      "sku": "RW-STAND-SS",
+      "title": "Rockwell Stainless Steel Razor Stand",
+      "quantity": 1,
+      "price": 10.00
+    }
+  ],
+  "shippingAddress": {
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "address1": "456 Oak Avenue",
+    "city": "Los Angeles",
+    "province": "CA",
+    "country": "US",
+    "zip": "90001"
+  },
+  "createdAt": "2026-04-01T15:45:00Z"
+}

@@ -1,0 +1,25 @@
+{
+  "orderId": "RCU-10001",
+  "orderNumber": "RCU10001",
+  "email": "customer@example.com",
+  "totalPrice": 120.00,
+  "currency": "USD",
+  "lineItems": [
+    {
+      "sku": "RW-6S-SS",
+      "title": "Rockwell 6S Adjustable Safety Razor",
+      "quantity": 1,
+      "price": 120.00
+    }
+  ],
+  "shippingAddress": {
+    "firstName": "John",
+    "lastName": "Smith",
+    "address1": "123 Main Street",
+    "city": "New York",
+    "province": "NY",
+    "country": "US",
+    "zip": "10001"
+  },
+  "createdAt": "2026-04-01T14:30:00Z"
+}

@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  dynamodb-local:
+    image: amazon/dynamodb-local:latest
+    container_name: rockwell-dynamodb
+    ports:
+      - "8000:8000"
+    command: "-jar DynamoDBLocal.jar -inMemory"
+
+  mock-erp-api:
+    image: node:20-alpine
+    container_name: rockwell-mock-erp
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./mock-erp:/app
+    working_dir: /app
+    command: "node server.js"
+    depends_on:
+      - dynamodb-local
+
+# The DynamoDB table is created automatically by the test suite (see the
+# beforeAll hook in tests/handler.test.ts), so there is no setup step to run —
+# just `docker compose up -d` and then `npm test`.

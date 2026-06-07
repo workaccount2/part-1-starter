@@ -1,0 +1,25 @@
+{
+  "orderId": "RCU-10004",
+  "orderNumber": "RCU10004",
+  "email": "lastpage@example.com",
+  "totalPrice": 99.00,
+  "currency": "USD",
+  "lineItems": [
+    {
+      "sku": "RW-LASTPAGE-SS",
+      "title": "Rockwell Last-Page Razor",
+      "quantity": 1,
+      "price": 99.00
+    }
+  ],
+  "shippingAddress": {
+    "firstName": "Pat",
+    "lastName": "Page",
+    "address1": "50 Boundary Road",
+    "city": "Seattle",
+    "province": "WA",
+    "country": "US",
+    "zip": "98101"
+  },
+  "createdAt": "2026-04-01T17:00:00Z"
+}
