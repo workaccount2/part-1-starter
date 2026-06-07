@@ -26,7 +26,7 @@ export async function getSkuMappings(): Promise<SkuMapping[]> {
 
     const data = (await response.json()) as { mappings: SkuMapping[] };
     allMappings.push(...data.mappings);
-    //note: this variable check if the fetch return items more than 50
+    // note: this variable check if the fetch return items more than 50
     // note continue: there issue with this comparison, the fetch request for 50 items, if the API return 50 items, then the comparison will be "false"
     // note continue: The while loop will stop and page 2 will never be fetched. 
     // note continue: this will result in missing products, therefore missing needed data that might be need in the future and code crashing in the production.

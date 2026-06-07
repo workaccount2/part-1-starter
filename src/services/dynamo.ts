@@ -48,7 +48,7 @@ export async function createOrderRecord(record: OrderRecord): Promise<void> {
     })
   );
 }
-
+// this function is responsible for handling/updating order state throughout the process
 export async function updateOrderPhase(
   orderId: string,
   phase: OrderPhase,
