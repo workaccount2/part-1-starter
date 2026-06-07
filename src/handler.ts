@@ -66,8 +66,8 @@ async function processRecord(record: SQSRecord): Promise<void> {
   } catch (err) {
     // note: in case of error, there is not output handling of the error
     // note continue: in order to check any errors happen withing the try catch block, i did console.warn(`getskumapping errors: ${err}`);
-    // the console.warn returned `getskumapping errors: Error: ERP API error: 500 Internal Server Error`
-    // I added an error warning, updated the updateOrderPhase function and return to the processRecord caller in order to avoid the script crashing to the need to use skuMappings inside this for loop for (const lineItem of order.lineItems)
+    // note continue: the console.warn returned `getskumapping errors: Error: ERP API error: 500 Internal Server Error`
+    // note continue: I added an error warning, updated the updateOrderPhase function and return to the processRecord caller in order to avoid the script crashing to the need to use skuMappings inside this for loop for (const lineItem of order.lineItems)
     console.error(`Failed to fetch SKU mappings for order ${order.orderId}:`, err);
     await updateOrderPhase(order.orderId, "A0", `ERP mapping fetch failed: ${(err as Error).message}`);
     return; 
