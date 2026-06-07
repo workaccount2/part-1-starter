@@ -112,8 +112,12 @@ async function processRecord(record: SQSRecord): Promise<void> {
   try {
     const erpSalesOrderId = await createSalesOrder(erpOrder);
     console.log(`Created ERP sales order: ${erpSalesOrderId} for order ${order.orderId}`);
-
-    updateOrderPhase(order.orderId, "A1");
+    // note: this is an asynchronously function async function updateOrderPhase(...)
+    // note continue: every time the codes get to this line, it does not wait for the fucntion to finish its executions. 
+    // note continue: therefore, the code continue without resolving the order updates. 
+    // note continue: if the code ever needed the new order state, the result will be outdated
+    //note continue: I added an `await` to make the hold up until the funciton finished it execution
+    await updateOrderPhase(order.orderId, "A1");
   } catch (err) {
     console.error(`Failed to create ERP sales order for ${order.orderId}:`, err);
     await updateOrderPhase(order.orderId, "A0", `ERP creation failed: ${(err as Error).message}`);
